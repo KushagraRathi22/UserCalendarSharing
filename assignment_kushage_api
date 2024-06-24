@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "3f9c7e87-8de0-48dd-8323-fc04236596c2",
+		"name": "User Calender App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20794539",
+		"_collection_link": "https://lunar-space-645553.postman.co/workspace/My-Workspace~96cf0d25-bf8b-4b35-8440-bce449caa1c5/collection/20794539-3f9c7e87-8de0-48dd-8323-fc04236596c2?action=share&source=collection_link&creator=20794539"
+	},
+	"item": [
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"shiwang\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"shiwang\",\r\n    \"email\":\"shiwang@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/registration/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"registration",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create an Event",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5MTQ2Njc0LCJpYXQiOjE3MTkxNDYzNzQsImp0aSI6ImU4ZjE0NjY5MWExOTRlNzg5YzU0ZjA2MzNmYjMwYTBjIiwidXNlcl9pZCI6MiwiZW1haWwiOiJzaGl3YW5nQGdtYWlsLmNvbS5jb20ifQ.ThCdsUuLsyLiLJ_7x1JFIFz94Dcbn-Z2jtIjokyFYf8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"title\": \"Comedy Show\",\r\n    \"description\": \" Comedy Show in Koramangla\",\r\n    \"start_time\": \"2024-06-28T11:00:00\",\r\n    \"end_time\": \"2024-06-28T12:00:00\",\r\n    \"calendar\":\"1\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/calender/events/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"calender",
+						"events",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Calendar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5MTM5NDM4LCJpYXQiOjE3MTkxMzkxMzgsImp0aSI6IjY0NWI0OWNiMTRkMTQ4MzI4MzhiZmZhMzFlYzY3MzI4IiwidXNlcl9pZCI6MiwiZW1haWwiOiJzaGl3YW5nQGdtYWlsLmNvbS5jb20ifQ.HOX3NpWBwnt8IPowdEKFaCBeJqN5hTlQE7XKS6wyWEg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5MTM2MjkxLCJpYXQiOjE3MTkxMzU5OTEsImp0aSI6IjYxNDQ0NzMwN2QzZDRmZGVhNjc0MzE3MWU4MzRkMGI1IiwidXNlcl9pZCI6MiwiZW1haWwiOiJzaGl3YW5nQGdtYWlsLmNvbS5jb20ifQ.5bED-ChMyQPkZrX_EirwFAKkgNYk-lL7m1E1k4hIQLI",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Shiwang's Calendar\",\r\n    \"description\": \"Calender for Events\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/calender/create/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"calender",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "To get all the events",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5MTUxMjk5LCJpYXQiOjE3MTkxNTA5OTksImp0aSI6Ijk5NGE5OWRhZmFhNDRiODZhZmM1YjYzOGZkMjY1YjUwIiwidXNlcl9pZCI6MiwiZW1haWwiOiJzaGl3YW5nQGdtYWlsLmNvbS5jb20ifQ.lWP7he4KoW3HlxCQ9C7HNXirTQPpF3-cHYteKocyfCo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "italian dance classes",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "6",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/calender/events/6/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"calender",
+						"events",
+						"6",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "To share calendar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5MTYxMjE1LCJpYXQiOjE3MTkxNjA5MTUsImp0aSI6IjQ0MGNjYmUzYTkwZjRmMWY4MjNmYTJlNjE1MjUzNmIxIiwidXNlcl9pZCI6MiwiZW1haWwiOiJzaGl3YW5nQGdtYWlsLmNvbS5jb20ifQ.gWOVSjIidE9VwQSw7xvyZI7I6ddzH5QrUgtlWPGDdxk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"calendar_id\":\"1\",\r\n    \"shared_with_id\":\"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/calender/share/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"calender",
+						"share",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
